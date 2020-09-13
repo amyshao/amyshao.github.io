@@ -80,15 +80,18 @@ main {
     0% {opacity: 1;}
     50% {left: 47%;}
     75% {left: 47% }
-    100% {left: 57%; right: 43%; top: 30%; position: fixed;}
+    100% {left: 57%; right: 43%; top: 34%; position: fixed;}
 
 }
 
 .girl {
-    height: 35%; 
+    max-height: 35%; 
+    max-width: 50%;
+    height: auto;
+    width: auto;
     z-index: 101;
     position: fixed;
-    top: 30%; left: 20%; right: 80%;
+    top: 34%; left: 20%; right: 80%;
     animation-name: girl-animation;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -97,7 +100,10 @@ main {
 }
 
 .hello {
-    height: 60%; 
+    max-height: 60%; 
+    max-width: 50%;
+    width: auto;
+    height: auto;
     z-index: 50;
     position: fixed;
     left: 20%;
