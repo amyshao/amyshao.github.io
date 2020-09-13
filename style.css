@@ -103,7 +103,6 @@ main {
     left: 20%;
     right: 80%;
     top: 25%;
-    
 }
 
 @keyframes home-text {
@@ -123,3 +122,79 @@ main {
     animation-iteration-count: 1;
 }
 
+
+@keyframes fade {
+    0% {opacity: 0; top: 0px}
+    100% {opacity: 1; top: 100px}
+}
+
+.aboutme-main {
+    display: flex;
+}
+
+.me {
+    height: 70vh;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.about-text {
+    margin-top: 10vh;
+    margin-right: 20vh;
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes hi-there {
+    0% {left: 100px}
+    100% {left: 0px}
+}
+
+.h1, .h2, .p1 {
+    margin-top: 20px;
+}
+
+.h1 {
+    font-size: 40px;
+    animation-name: hi-there;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.about-buttons {
+    display: inline-block;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+}
+a.button, .resume {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background: teal;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+a.button:hover, .resume:hover {
+    border: none;
+    background: white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    color: teal;
+    cursor: pointer;
+}
