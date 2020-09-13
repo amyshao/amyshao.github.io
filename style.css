@@ -167,7 +167,15 @@ main {
 }
 
 .about-buttons {
-    display: inline-block;
+    display: flex;
+    height: 50px;
+    width: 50vh;
+}
+
+.resume { /* form */
+    margin: auto;
+    width: 150px;
+    height: 60px;
 }
 
 a.button {
@@ -176,7 +184,8 @@ a.button {
     appearance: button;
     text-decoration: none;
 }
-a.button, .resume {
+
+a.button, .resume-button {
     padding: 10px;
     margin: 5px;
     border: none;
@@ -189,7 +198,7 @@ a.button, .resume {
     cursor: pointer;
 }
 
-a.button:hover, .resume:hover {
+a.button:hover, .resume-button:hover {
     border: none;
     background: white;
     width: 150px;
