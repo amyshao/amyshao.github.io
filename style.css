@@ -489,8 +489,9 @@ a.button:hover {
     opacity: 0.5;
 }
 
-.title-container {
-    background-color: oldlace;
+.title-container, .process-container{
+    background-color: cadetblue;
+    color: white;
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: center;
@@ -498,11 +499,6 @@ a.button:hover {
     font-size: 40px;
 }
 .process-container {
-    background-color: oldlace;
-    grid-column-start: 1;
     grid-column-end: 4;
-    text-align: center;
-    padding: 10%;
-    font-size: 40px;
     margin-top: 20%;
 }
