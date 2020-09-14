@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
+    background-color: #f2eee7;
 }
 
 nav {
@@ -14,7 +15,7 @@ nav {
     margin: auto;
     justify-content: space-around;
     align-items: center;
-    background-color: #f2eee7;
+    background-color: none;
     min-height: 10vh;
     max-height: 10vh;
 }
@@ -45,14 +46,13 @@ nav {
 .amyshao { /* home link */
     font-weight: 800;
     text-decoration: none;
-    padding: 20px;
     color: #544c4b;
 }
 
 .nav-links {
     z-index: 200;
     justify-content: space-around;
-    width: 60vh;
+    width: 50%;
 }
 
 .nav-link {
@@ -148,7 +148,6 @@ main {
 }
 
 .girl {
-    background-color: none palegoldenrod;
     max-height: 35%; 
     min-height: 10%;
     max-width: 40%;
@@ -201,6 +200,23 @@ main {
     }
 }
 
+/* for phones */
+@media screen and (max-width: 500px) {
+    .girl {
+        max-width: 40%;
+        top: 33%;
+        left: 0px;
+    }
+    .hello {
+        left: 10%;
+        max-width: 40%;
+        
+    }
+    nav {
+        align-items: right;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .girl {
         max-width: 70%;
@@ -213,9 +229,8 @@ main {
 
 @keyframes fade {
     0% {opacity: 0; top: 0px}
-    100% {opacity: 1; top: 100px}
+    100% {opacity: 1; top: 10px}
 }
-
 
 .aboutme-main {
     display: flex;
@@ -331,4 +346,125 @@ a.button:hover {
     body {
         background-color: #f2eee7;
     }
+}
+
+
+/*============ code page ===============*/
+
+@keyframes zoom {
+    0% {transform: scale(1)}
+    100% { transform: scale(1.05)}
+}
+
+.code-body {    
+    background-color: none;
+    background-image: url(./images/village.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.palli-logo {
+    width: 500px;
+}
+
+.palli {
+   width: 50%;
+}
+
+.palli-icon {
+    width: 20%;
+}
+
+.code-main {
+    animation: zoom 2s ease forwards 0s;
+    position: relative; 
+    text-align: left;
+    align-items: center;
+    background-color: #FFFFFF00;
+}
+
+.code-text {
+    animation: fade 2s ease forwards 0s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 20vh;
+    height: auto;
+    width: 50%;
+    padding: 5vh;
+    background-color: #FFFFFFa0;
+}
+
+.code-text .h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.code-text .p1{
+    color: #544c4b;
+}
+
+.code-text .h1 {
+    font-size: 30px;
+    color: #ef5d50;
+    animation-duration: 2.5s;
+}
+
+.code-buttons {
+    margin-top: 5vh;
+    animation-duration: 3s;
+}
+
+.code-buttons .button {
+    text-align: center;
+    font-size: 18px;
+    background-color: #ef5d50;
+
+}
+
+.code-buttons .button:hover {
+    font-size: 18px;
+    background-color: #3444e3;
+    color: white;
+}
+
+.code-nav {
+    background-color: #DFFCFF;
+}
+
+.code-nav .menu {
+    background-color: #DFFCFF;
+}
+
+@media screen and (max-width: 1000px) {
+    .code-text {
+        display: flex;
+        position: relative;
+        height: auto;
+        max-width: 60%;
+        right: 10vh;
+        left: 10vh;
+        width: auto;
+        padding: 2vh;
+    }
+    .code-text .h1, .code-text .h2 {
+        width: 100%;
+    }
+
+    .code-nav .p1 {
+        width: 95%;
+        
+    }
+    .code-buttons .button, .code-buttons .button:hover {
+        font-size: 13px;
+        width: 120px;
+        height: 40px
+    }
+    .palli-logo {
+        max-width: 100%;
+        width: auto;
+    }
+
 }
