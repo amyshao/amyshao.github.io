@@ -452,7 +452,6 @@ a.button:hover {
     .code-text .h1, .code-text .h2 {
         width: 100%;
     }
-
     .code-nav .p1 {
         width: 95%;
         
@@ -466,5 +465,44 @@ a.button:hover {
         max-width: 100%;
         width: auto;
     }
+}
 
+/*=============== art page =================*/
+
+.pic-title {
+    text-align: center;
+}
+.pic-container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%; 
+    grid-gap: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    animation: fade 1s ease forward 1s;
+}
+
+.pic {
+    width: 100%;
+    animation: zoom 2s ease forward 0s;
+}
+.pic:hover {
+    opacity: 0.5;
+}
+
+.title-container {
+    background-color: oldlace;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    padding: 10%;
+    font-size: 40px;
+}
+.process-container {
+    background-color: oldlace;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    padding: 10%;
+    font-size: 40px;
+    margin-top: 20%;
 }
