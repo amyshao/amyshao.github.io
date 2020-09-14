@@ -31,9 +31,10 @@ nav {
 .menu {
     display: none;
     cursor: pointer;
+    background-color: #f2eee7;
 }
 
-.menu div{
+.menu div{ /* menu icon */
     width: 25px;
     height: 3px;
     background-color: #544c4b;
@@ -53,9 +54,6 @@ nav {
     justify-content: space-around;
     width: 60vh;
 }
-.nav-link:hover, .amyshao:hover, .fa:hover {
-    opacity: 0.7;
-}
 
 .nav-link {
     z-index: 220;
@@ -63,8 +61,11 @@ nav {
     color: #544c4b;
 }
 
+.nav-link:hover, .amyshao:hover, .fa:hover {
+    opacity: 0.7;
+}
 
-/* Style all font awesome icons */
+/* icons */
 .fa {
     flex: 1;
     padding: 5px;
@@ -83,12 +84,12 @@ nav {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 92vh;
+        height: 60vh;
+        width: 30%;
         top: 8vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
         background-color: cadetblue;
         transform: translateX(100%);
     }
@@ -120,6 +121,9 @@ nav {
 }
 
 
+/*============== home page ==================*/
+
+
 main {
     background-color: #f2eee7;
     height: 90vh;
@@ -128,9 +132,8 @@ main {
 
 /* the girl walking animation on home page */
 .animation {
-    background-color: f2eee7;
-    align-items: center;
     height: 52vh;
+    width: 100%;
 }
 
 
@@ -139,18 +142,21 @@ main {
     0% {opacity: 1;}
     50% {left: 47%;}
     75% {left: 47%; }
-    100% {left: 57%; right: 43%; top: 34%; position: fixed;}
+    100% {left: 57%; right: 43%; top: 30%; position: fixed;}
 
 }
 
 .girl {
+    background-color: none palegoldenrod;
     max-height: 35%; 
+    min-height: 25%;
     max-width: 50%;
+    min-width: 50%;
     height: auto;
     width: auto;
     z-index: 101;
     position: fixed;
-    top: 34%; left: 20%; right: 80%;
+    top: 30%; left: 27%; right: 80%;
     animation-name: girl-animation;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -159,15 +165,13 @@ main {
 }
 
 .hello {
-    max-height: 60%; 
+    max-height: 20%; 
     max-width: 50%;
     width: auto;
     height: auto;
     z-index: 50;
     position: fixed;
-    left: 20%;
-    right: 80%;
-    top: 25%;
+    top: 35%; left: 27%; right: 80%;
 }
 
 @keyframes home-text {
@@ -188,17 +192,33 @@ main {
 }
 
 
+/*============ about page =============*/
+
+
 @keyframes fade {
     0% {opacity: 0; top: 0px}
     100% {opacity: 1; top: 100px}
 }
 
+
 .aboutme-main {
     display: flex;
 }
 
+.me-container {
+    display: block;
+    flex: 1;
+    padding-top: 8vh;
+    justify-content: space-around;
+}
+
 .me {
-    height: 70vh;
+    display: block;
+    max-width: 100%;
+    max-height: 80%;
+    padding-left: 10vh;
+    height: auto;
+    width: auto;
     animation-name: fade;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -206,29 +226,29 @@ main {
 }
 
 .about-text {
-    margin-top: 10vh;
-    margin-right: 20vh;
-    animation-name: fade;
+    flex: 1;
+    width: 80%;
+    padding-top: 12vh;
+    padding-right: 10vh;;
     animation-duration: 3s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
 
-@keyframes hi-there {
-    0% {left: 100px}
-    100% {left: 0px}
+
+@keyframes fade-in {
+    0% {opacity: 0; transform: translateX(50px);}
+    100% {opacty: 1; transform: translateX(0px);}
 }
 
-.h1, .h2, .p1 {
+.h1, .h2, .p1, .about-buttons {
     margin-top: 20px;
+    animation: fade-in 1s ease forwards 0s;
 }
 
 .h1 {
     font-size: 40px;
-    animation-name: hi-there;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+    
 }
 
 .about-buttons {
@@ -265,4 +285,34 @@ a.button:hover {
     font-size: 20px;
     color: teal;
     cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .aboutme-main {
+        flex-direction: column;
+    }
+    .me-container {
+        padding-top: 5vh;
+        height: 40vh;
+        display: flex;
+    }
+    .me {
+        max-height: 100%;
+        padding-left: 0vh;
+    }
+    .about-text {
+        padding-top: 0px;
+        padding-right: 5vh;
+        padding-left: 5vh;
+        padding-bottom: 5vh;
+        text-align: center;
+        width: 100%;
+    }
+    .about-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    body {
+        background-color: #f2eee7;
+    }
 }
