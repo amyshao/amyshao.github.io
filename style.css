@@ -143,15 +143,15 @@ main {
     0% {opacity: 1;}
     50% {left: 47%;}
     75% {left: 47%; }
-    100% {left: 57%; right: 43%; top: 30%; position: fixed;}
+    100% {left: 57%; right: 43%; position: fixed;}
 
 }
 
 .girl {
     background-color: none palegoldenrod;
     max-height: 35%; 
-    min-height: 25%;
-    max-width: 50%;
+    min-height: 10%;
+    max-width: 40%;
     min-width: 50%;
     height: auto;
     width: auto;
@@ -183,6 +183,8 @@ main {
 
 .home-text {
     height: 20vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
     text-align: center;
     font-size: 20px;
     margin-top: 20px;
@@ -190,6 +192,19 @@ main {
     animation-duration: 6s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+}
+
+@media screen and (max-width: 1100px) {
+    .girl {
+        max-width: 100%;
+        top: 33%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .girl {
+        max-width: 70%;
+    }
 }
 
 
