@@ -49,47 +49,34 @@ nav {
 }
 
 .nav-links {
+    z-index: 200;
     justify-content: space-around;
     width: 60vh;
 }
+.nav-link:hover, .amyshao:hover, .fa:hover {
+    opacity: 0.7;
+}
 
 .nav-link {
+    z-index: 220;
     text-decoration: none;
     color: #544c4b;
 }
 
 
-
 /* Style all font awesome icons */
 .fa {
     flex: 1;
-    padding: 20px;
+    padding: 5px;
     font-size: 30px;
+    color: #544c4b;
     width: 50px;
     text-align: center;
     text-decoration: none;
-  }
+}
   
-  /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  /* Twitter */
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     body {
         overflow-x: hidden;
     }
@@ -102,13 +89,14 @@ nav {
         flex-direction: column;
         align-items: center;
         width: 50%;
-        background-color: teal;
-        transform: translate(100%);
-        transition: transform 0.5s ease-in;
+        background-color: cadetblue;
+        transform: translateX(100%);
     }
-    .menu {
-        display: block;
-        padding: 20px;
+    .nav-link {
+        color: white;
+    }
+    .fa {
+        color: white;
     }
     .logo {
         justify-content: space-around;
@@ -116,11 +104,19 @@ nav {
     .nav-links li {
         opacity: 0;
     } 
-    
+    .menu {
+        display: block;
+        padding: 20px;
+    }
 }
 
 .nav-active {
-    transform: translate(0%);
+    transform: translateX(0%);
+}
+
+@keyframes navfade {
+    0% {opacity: 0; transform: translateX(-40px);}
+    100% {opacity: 1; transform: translateX(0px);}
 }
 
 
@@ -142,7 +138,7 @@ main {
 @keyframes girl-animation {
     0% {opacity: 1;}
     50% {left: 47%;}
-    75% {left: 47% }
+    75% {left: 47%; }
     100% {left: 57%; right: 43%; top: 34%; position: fixed;}
 
 }
@@ -241,12 +237,6 @@ main {
     width: 50vh;
 }
 
-.resume { /* form */
-    margin: auto;
-    width: 150px;
-    height: 60px;
-}
-
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -254,7 +244,7 @@ a.button {
     text-decoration: none;
 }
 
-a.button, .resume-button {
+a.button {
     padding: 10px;
     margin: 5px;
     border: none;
@@ -267,7 +257,7 @@ a.button, .resume-button {
     cursor: pointer;
 }
 
-a.button:hover, .resume-button:hover {
+a.button:hover {
     border: none;
     background: white;
     width: 150px;
