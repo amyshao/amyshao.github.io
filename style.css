@@ -85,7 +85,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 60vh;
-        width: 30%;
+        width: 35%;
         top: 8vh;
         display: flex;
         flex-direction: column;
@@ -116,7 +116,7 @@ nav {
 }
 
 @keyframes navfade {
-    0% {opacity: 0; transform: translateX(-40px);}
+    0% {opacity: 0; transform: translateX(-20px);}
     100% {opacity: 1; transform: translateX(0px);}
 }
 
@@ -132,6 +132,7 @@ main {
 
 /* the girl walking animation on home page */
 .animation {
+    display: block;
     height: 52vh;
     width: 100%;
 }
