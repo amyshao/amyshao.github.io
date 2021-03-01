@@ -19,9 +19,9 @@
             </div>
             <ul class="nav-links">
                 <li><a class="nav-link" href="about.html">about</a></li>
-                <li><a class="nav-link" href="code.html">code</a></li>
-                <li><a class="nav-link" href="composition.html">composition</a></li>
-                <li><a class="nav-link" href="Amy_Shao_Resume_2020.pdf">resume</a></li>
+                <li><a class="nav-link" href="code.html">projects</a></li>
+                <li><a class="nav-link" href="notes.html">notes</a></li>
+                <li><a class="nav-link" href="./resources/files/Amy_Shao_Resume.pdf">resume</a></li>
                 <li><a href="https://linkedin.com/amy-shao-" class="fa fa-linkedin"></a></li>
                 <li><a href="https://github.com/amyshao" class="fa fa-github"></a></li>
             </ul>
@@ -33,20 +33,11 @@
         </nav>
             
         <main>
-            <div class="animation">
-                <div class="girl-hello">
-                    <img class="girl"src="./images/openeyes.PNG"/>
-                    <img class="hello" src="./images/hello.PNG"/>
-                </div>
-                
-            </div>
-            <div class="home-text">
-                <p>
-                    My name is Amy, welcome to my site!  <br>
-                    Navigate for some coding, some art, or some things about me. 
-                </p>
-            </div>
-
+            <canvas id="myCanvas"></canvas>
+            <script src="game.js"></script>
+            <img id="about-house" class="house"src="./resources/images/home/aboutHouse.PNG"/>
+            <img id="notes-house" class="house" src="./resources/images/home/notesHouse.PNG"/>
+            <img id="projects-house" class="house" src="./resources/images/home/projectsHouse.PNG"/>
         </main>
         
         <script src="app.js"></script>
